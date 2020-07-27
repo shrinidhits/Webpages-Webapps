@@ -1,0 +1,42 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background:url("./pattern.png");
+
+}
+.main{
+    background:rgb(4, 39, 155);
+    width:400px;
+    margin:100px auto;
+    height:175px;
+    position: relative;
+    padding:30px;
+    border-radius:15px;
+}
+.badge{
+    background:#eb3c07;
+    color:white;
+    padding:5px 10px;
+    font-weight:bold;
+    width: 96px;
+    position:absolute;
+    top:-15px;
+    left: 35%;
+    font-family: 'Roboto Slab', serif;
+    text-align:center;
+    border-radius:10px;
+}
+
+.clock{
+    background:#83c3f7;
+    color: rgb(4, 39, 155);
+    text-align:center;
+    font-size:55px;
+    height:100%;
+    padding-top: 20px; 
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+}

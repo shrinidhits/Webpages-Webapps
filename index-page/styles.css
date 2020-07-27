@@ -1,0 +1,478 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(GothamMedium.ttf);
+}
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family:myFirstFont,sans-serif;
+    font-size:10px;
+    box-sizing:border-box;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+p{
+    font-size: 1.6rem;
+}
+img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+}
+
+section{
+    padding: 5rem 0;
+}
+
+
+header{
+    width:100%;
+    height:5rem;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+.container{
+    width:100%;
+    max-width: 98rem;
+    margin:0 auto;
+    padding:0 1.5rem;
+}
+
+nav{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 0;
+    border-bottom: 2px solid rgba(21, 41, 29, 0.897);
+}
+
+.nav-brand{
+    width:5rem;
+}
+.menu-icons i{
+    font-size:3.5rem;
+    color: rgba(21, 41, 29, 0.897);
+    cursor:pointer;
+}
+
+.close i{
+    color:#227c66;
+}
+
+.nav-list{
+    width:25rem;
+    height:100vh;
+    background-color:  rgba(21, 41, 29, 0.897);
+    position: fixed;
+    top:0;
+    right:-26rem;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    z-index:1500;
+    transition:all 650ms ease in-out;
+}
+.nav-list.active{
+    right:0;
+}
+.close{
+    position: absolute;
+    top:1rem;
+    left:1.5rem;
+}
+.nav-item{
+    margin:1.5rem 0;
+}
+
+.nav-link{
+    font-size:1.6rem;
+    color:rgba(255, 255, 255, 0.959);
+}
+
+.hero{
+    width:100%;
+    height:80vh;
+    background: linear-gradient(135deg,rgb(82, 194, 119) 0%,rgba(19, 105, 65, 0.8) 100%), 
+    url("images/header.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom: -3px;
+    width:100%;
+    height:4.7rem;
+    background: url("images/wave-small.png") center no-repeat;
+    background-size: cover;
+
+}
+
+.main-message{
+
+    width:100%;
+    max-width: 50rem;
+    color:#fafafa;
+    transform: translateY(20%);
+}
+
+.main-message h3{
+    font-size: 3rem;
+}
+
+.main-message h1{
+    font-family: myFirstFont,sans-serif;
+    font-size: 6rem;
+    margin:1rem 0;
+
+}
+.main-message p{
+    font-size: 2rem;
+}
+
+
+.btn{
+    background-color:  rgba(21, 41, 29, 0.897);
+    border-radius:2rem;
+    border-color: beige;
+    color:#fafafa;
+    display: inline-block;
+    margin-top:2rem;
+    padding:1rem 2rem 1rem;
+    transition: background-color 650ms;
+    font-size: 1.5rem;
+}
+.expo p{
+    font-size: 5rem;
+}
+.two p{
+    font-size:3rem;
+}
+.activities-grid-item a{
+    width: 14rem;
+    color:rgba(18, 184, 101, 0.897);
+}
+
+.btn:hover{
+    background-color: #227c66;
+    color: rgba(6, 12, 9, 0.897);
+}
+
+.experience-outdoors{
+    padding:0;
+}
+.title-heading{
+    text-align:center;
+    margin-bottom:10rem;
+    color:rgba(0,0,0,.7);
+
+}
+
+.name{
+    color:white;
+    font-size:2rem;
+}
+.title-heading h3{
+    font-size:2rem;
+}
+.title-heading h1{
+    font-family: myFirstFont,sans-serif;
+    font-size:5rem;
+    margin: .5rem 0 1rem;
+}
+.title-heading p{
+    font-size: 3rem;
+}
+
+
+.activities-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap:2.5rem;
+}
+
+.activities-grid-item{
+    height:40rem;
+    padding:5rem;
+    color:#fafafa;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index:1;
+
+}
+
+.activities-grid-item::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image: linear-gradient(135deg,rgb(82, 194, 119) 0%,rgba(19, 105, 65, 0.8) 100%);
+    z-index:-1;
+}
+
+.star-gazing{
+    background: url("images/WIE.jpeg") center no-repeat;
+}
+
+.hiking{
+    background: url("images/robotics'12.jpeg") center no-repeat;
+}
+
+.camping{
+    background: url("images/callfa.jpeg") center no-repeat;
+}
+
+.neural{
+    background: url("images/finger.jpg") center no-repeat;
+    background-size: cover;
+}
+.photo{
+    background: url("images/pic.jpg") center no-repeat;
+    background-size: cover;
+}
+.cyberia{
+    background: url("images/cyberia.jpg") center no-repeat;
+    background-size: cover;
+}
+.activities-grid-item i{
+    font-size :4rem;
+    color:#102e26;
+}
+
+.activities-grid-item ion-icon{
+    font-size :4rem;
+    color:#716bcc;
+}
+.activities-grid-item h1{
+    font-family:myFirstFont,sans-serif;
+    font-size:1.7rem;
+    margin:2rem 0;
+    color:#102e26;
+}
+
+.testimonials{
+    width:100%;
+    height:80vh;
+
+    background: linear-gradient(135deg,rgb(82, 194, 119) 0%,rgba(19, 105, 65, 0.8) 100%), 
+    url("images/testimonials-bg.jpg") center no-repeat fixed;
+    background-size: cover;
+    position:relative;
+}
+
+.testimonials::before{
+    
+    content:"";
+    position:absolute;
+    top:-3px;
+    left:0;
+    width:100%;
+    height:4.7rem;
+    background:url("images/wave-small-reversed.png") center no-repeat;
+    background-size: cover;
+}
+
+.testimonial{
+    width:100%;
+    color:#fafafa;
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+
+.testimonial-text-box{
+    padding:0 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+}
+
+.testimonial-text-box i{
+    position: absolute;
+    top:-8rem;
+    left:50%;
+    transform: translateX(-50%);
+    font-size:8rem;
+    color:rgba(21, 41, 29, 0.897);
+    opacity:.85;
+    z-index:-1;
+}
+
+.testimonial-customer img{
+    width:10rem;
+    height:10rem;
+    border-radius: 100%;
+    border:3px solid rgba(21, 41, 29, 0.897);
+}
+
+.adventure-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap:2.5rem;
+    margin-bottom:2rem;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.adventure-grid-item{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color:rgba(18, 184, 101, 0.897);
+}
+.num{
+    font-size: 5rem;
+}
+.adventure-grid-item i{
+    justify-content: center;
+    font-size :4rem;
+    color:#19473b;
+}
+
+
+
+
+footer{
+    padding:2.5rem;
+    background-color: rgba(21, 41, 29, 0.897);
+    text-align: center;
+    color:rgba(248, 246, 246, 0.993);
+}
+
+@media screen and (min-width:350px){
+    .main-message{
+        transform: translateY(50%);
+    }
+}
+
+@media screen and (min-width:470px){
+    .hero::before{
+        height:9.4rem;
+        background: url("images/wave-medium.png");
+        background-size: cover;
+
+    }
+    .testimonials::before{
+        height:9.4rem;
+        background: url("images/wave-medium-reversed.png");
+        background-size: cover;
+
+    }
+}
+
+
+@media screen and (min-width:700px){
+    header{
+        height:5rem;
+    }
+    .nav-brand{
+        width:8rem;
+    }
+    .nav-list{
+        width:initial;
+        height:initial;
+        background-color: transparent;
+        position:initial;
+        top:initial;
+        right:initial;
+        flex-direction:row;
+        transition:initial;
+    }
+
+    .menu-icons{
+        display:none;
+    }
+
+    .nav-item{
+        margin:0 2.5rem;
+    }
+
+    .nav-link,
+    .current{
+        color:#ffffff;
+        position:relative;
+        font-size:1.5rem;
+    }
+
+    .nav-link::before,
+    .current::before{
+        content:"";
+        position:absolute;
+        left:0;
+        bottom:-.5rem;
+        background-color: #0d241c;
+        height:2px;
+        width:100%;
+        transform:scaleX(0);
+        transform-origin:left;
+        transition: transform 650ms;
+    }
+    .current::before{
+        transform:scaleX(1);
+    }
+    .nav-link:hover::before{
+        transform:scaleX(1);
+    }
+
+    .hero{
+        height:90vh;
+    }
+    .main-message{
+        transform:translateY(70%);
+    }
+
+    .title-heading h1{
+        font-size: 2.5rem;
+    }
+
+    
+}
+
+@media screen and (min-width:950px){
+    .hero::before{
+        height:22.7rem;
+        background: url("images/wave-large.png");
+        background-size: cover;
+
+    }
+    .testimonials::before{
+        height:22.7rem;
+        background: url("images/wave-large-reversed.png");
+        background-size: cover;
+
+    }
+}
+
+@media screen and (min-width:1200px)
+{
+    .hero{
+        height:90vh;
+    }
+}
